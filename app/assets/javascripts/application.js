@@ -14,4 +14,9 @@
 //= require bootstrap.min
 //= require jquery_ujs
 //= require turbolinks
+//= require ripples.min
+//= require material.min
 //= require_tree .
+
+
+$.material.init()

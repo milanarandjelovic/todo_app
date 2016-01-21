@@ -1,9 +1,17 @@
-<h1>Editing Todo List</h1>
+<div class="panel panel-primary">
 
-<%= render 'form' %>
+	<div class="panel-heading">
+		<h1>Editing Todo List</h1>
+	</div> <!-- /.panel-heading -->
 
+	<div class="panel-body">
 
-<div class="links">
-  <%= link_to 'Show', @todo_list %> |
-  <%= link_to 'Back', todo_lists_path %>
-</div>
+		<%= render 'form_edit' %>
+
+		<div class="btn-group btn-group-justified btn-group-raised">
+		  <%= link_to 'Show', @todo_list, class: "btn btn-info btn-raised" %> 
+		  <%= link_to 'Back', todo_lists_path, class: "btn btn-primary btn-raised" %>
+		</div> <!-- /.btn-group -->
+	</div> <!-- /.panel-body -->
+
+</div> <!-- /.panel-primary -->

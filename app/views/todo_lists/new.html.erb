@@ -1,7 +1,15 @@
-<h1>New Todo List</h1>
+<div class="panel panel-primary">
+	
+	<div class="panel-heading">
+		<h1>New Todo List</h1>
+	</div> <!-- /.panel-heading -->
 
-<%= render 'form' %>
+	<div class="panel-body">
+		<%= render 'form' %>		
 
-<div class="links">
-  <%= link_to 'Back', todo_lists_path %>
-</div>
+		<div class="links">
+  			<%= link_to 'Back', todo_lists_path, class: "btn btn-block btn-raised btn-primary" %>
+		</div>
+	</div> <!-- /.panel-body -->
+
+</div> <!-- /.panel-primary -->

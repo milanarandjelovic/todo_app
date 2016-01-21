@@ -1,17 +1,26 @@
 <p id="notice"><%= notice %></p>
 
-<h2><%= @todo_list.title%></h2>
-<p><%= @todo_list.description %></p>
+<div class="panel panel-primary">
+	
+	<div class="panel-heading">
+		<h2><%= @todo_list.title%></h2>	
+		<p><%= @todo_list.description %></p>
+	</div> <!-- /.panel-heading -->	
 
-<div class="item_wrapper">
-  <%= render @todo_list.todo_items %>
-  <div class="form">
-    <%= render 'todo_items/form' %>
-  </div>
-</div>
+	<div class="panel-body">			
+		<div class="item_wrapper">
+			 <%= render @todo_list.todo_items %>
+			 <div class="form">			
+    				<%= render 'todo_items/form' %>
+			</div> <!-- /.form -->
+		</div> <!-- /.item_wrapper -->			
+		<div class="btn-group btn-group-justified btn-group-raised">	
+		  <%= link_to 'Edit list', edit_todo_list_path(@todo_list), class: 'btn btn-raised btn-info' %>
+  		  <%= link_to 'Delete list', todo_list_path(@todo_list), method: :delete, data: {confirm: 'Are you sure'}, class: 'btn btn-raised btn-danger' %>
+ 		 <%= link_to 'Back', todo_lists_path, class: 'btn btn-raised btn-primary' %>
+		</div> <!-- /.btn-group -->
+	</div> <!-- /.panel-body -->	
 
-<div class="links">
-  <%= link_to 'Edit', edit_todo_list_path(@todo_list) %> |
-  <%= link_to 'Delete', todo_list_path(@todo_list), method: :delete, data: {confirm: 'Are you sure'} %> |
-  <%= link_to 'Back', todo_lists_path %>
-</div>
+</div> <!-- /.panel-primary -->
+
+

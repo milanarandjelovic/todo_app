@@ -1,17 +1,20 @@
-<% @todo_lists.each do |list| %>
-  <div class="container">
-    <div class="row">
-      <h2 class="list_title">
-        <%= link_to list.title, list %>
-      </h2>
-      <p class="desc_title">
-        <%= list.description %>
-      </p>
-    </div>
-  </div>
-<% end %>
+<div class="panel panel-primary">
+	  
+    <div class="panel-heading">     	
+      <h1>All Todo List</h1>
+	  </div> <!-- /panel-heading -->
+    
+	  <div class="panel-body">
+      <% @todo_lists.each do |list| %>
+      
+        <h2 class="list_title"> <%= link_to list.title, list %> </h2>
+        <p class="desc_title"> <%= list.description %> </p>   
+      <% end %>
 
-
-<div class="links">
-  <%= link_to 'Add new todo list', new_todo_list_path %>
-</div>
+      <div class="links">
+        <%= link_to 'Add new todo list', new_todo_list_path, class: "btn btn-block btn-raised btn-success" %>
+      </div>
+  </div> <!-- /.panel-body -->  
+  
+</div> <!-- /.panel-primary --> 
+    

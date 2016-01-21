@@ -12,14 +12,12 @@
   <% end %>
 
   <div class="form-group label-floating is-empty">
-    <%= f.label :title, class: 'control-label', for: 'title' %>
     <%= f.text_field :title, class: 'form-control', id: 'title' %>
   </div>
   <div class="form-group label-floating is-empty">
-    <%= f.label :description, class: 'control-label', for: 'description' %>
-    <%= f.text_area :description, class: 'form-control', id: 'description' %>
+      <%= f.text_area :description, class: 'form-control', id: 'description' %>
   </div>
   <div class="actions">
-    <%= f.submit 'Create new todo list', class: "btn btn-block btn-raised btn-success" %>
+    <%= f.submit 'Edit todo list', class: "btn btn-block btn-raised btn-success" %>
   </div>
 <% end %>

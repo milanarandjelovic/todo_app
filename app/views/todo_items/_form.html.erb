@@ -1,7 +1,9 @@
 <%= form_for([@todo_list, @todo_list.todo_items.build]) do |f| %>
-    <div class="form-group label-floating is-empty">
-    	<label for="i5i" class="control-label" for="item">Add new item</label>
+
+    <div class="form-group label-floating is-empty">    	
+ 		<%=  f.label 'Add new item' , class: 'control-label add_item', for: 'item' %>
       	<%= f.text_field :content, class: 'form-control', id: 'item' %>
-    </div>
-  <%= f.submit 'Add new item', class: 'btn btn-raised btn-block btn-success' %>
+    </div> <!-- /.form-group -->
+
+  	<%= f.submit 'Add new item', class: 'btn btn-raised btn-block btn-success' %>
 <% end %>

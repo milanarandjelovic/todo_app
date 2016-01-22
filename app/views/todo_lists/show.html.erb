@@ -3,13 +3,15 @@
 <div class="panel panel-primary">
 	
 	<div class="panel-heading">
-		<h2><%= @todo_list.title%></h2>	
-		<p><%= @todo_list.description %></p>
+		<h2 class="show_list_title"><%= @todo_list.title%></h2>	
+		<p class="show_desc_title"><%= @todo_list.description %></p>
 	</div> <!-- /.panel-heading -->	
 
 	<div class="panel-body">			
 		<div class="item_wrapper">
-			 <%= render @todo_list.todo_items %>
+			<div class="item_center">
+			 	<%= render @todo_list.todo_items %>
+			</div>
 			 <div class="form">			
     				<%= render 'todo_items/form' %>
 			</div> <!-- /.form -->

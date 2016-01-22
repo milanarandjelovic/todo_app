@@ -10,4 +10,3 @@ Ruby on Rails todo app
 	* Check list item
 	* Delete list item
 
-<tt>rake doc:app</tt>.

@@ -18,6 +18,67 @@
 //= require bootstrap-material-design.min
 //= require ripples.min
 
-body {
-  color: #eeeeee;
+body { 
+	background-color: #eeeeee; 
+}
+
+h1 { 
+	color: #000; 
+}
+
+.panel { 
+	margin-top: 30px; 
+	}
+
+.list_title { 
+	a {
+		color: #000; 
+		text-decoration: none; 
+	}
+}
+
+.desc_title { 
+	color: #797575; 
+}
+
+.show_list_title,
+.show_desc_title { 
+	color: #000; 
+}  
+
+.item_center { 
+	padding-left: 30px;
+	padding-right: 30px;
+	.item_holder {
+		height: 50px;
+		.complete {
+			width: 40px;
+			height: initial;
+			.fa-check {
+				font-size: 40px;
+				color: #4286F5;
+			}
+			.complet {
+				color: #F44236;
+			}
+		}
+		.todo_item {
+			margin-left: 60px;
+			position: relative;
+			bottom: 40px;
+			p {
+				font-size: 30px;
+			}
+		}
+	 	.delete {
+	 		width: 40px;
+			height: initial;
+			bottom: 80px;
+			position: relative;
+			.fa-trash {
+		 		font-size: 40px;
+		 		color: #4286F5;
+			}
+	 	}
+	}
 }
